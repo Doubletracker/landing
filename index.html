@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11110f">
+    <title>Doubletracker — Neural guitar doubletrack generator</title>
+    <meta name="description" content="Doubletracker turns one dry guitar DI take into a second performance, aiming for natural doubletracking rather than algorithmic widening.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Doubletracker — Record once. Double it naturally.">
+    <meta property="og:description" content="A neural guitar doubler trained on real double-tracked DI recordings.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:image:alt" content="Doubletracker — neural guitar doubletrack generator">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="site-config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Doubletracker, home">Doubletracker<span class="wordmark-dot">.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#demos">Demos</a>
+        <a href="#state">Current state</a>
+        <a href="#contribute">Contribute</a>
+      </nav>
+      <a class="header-contact" href="#contribute">Get in touch <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <p class="prototype-label">Research prototype</p>
+        <h1>Record once.<br><em>Double it naturally.</em></h1>
+        <p class="hero-copy">Doubletracker is an experimental neural guitar doubler trained on real DI pairs. The goal is to generate a second performance of the same part, creating a stereo image that feels closer to real doubletracking than algorithmic doubling or widening.</p>
+        <p class="hero-status">The current model is still early, and reconstruction quality remains a work in progress.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#demos">Hear the prototype <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="#contribute">Contribute DI / Join the project</a>
+        </div>
+      </section>
+
+      <section class="section demos" id="demos" aria-labelledby="demos-title">
+        <div class="section-heading">
+          <div><p class="section-index">01 / LISTEN</p><h2 id="demos-title">Current model examples</h2></div>
+          <p>Compare the recorded references, the real doubletrack, and the model output. For the stereo mixes, use headphones or properly placed monitors.</p>
+        </div>
+        <div class="legend" aria-label="Demo channel legend"><span><i class="dot original"></i> Recorded</span><span><i class="dot generated"></i> Generated</span><span class="headphones">Headphones recommended</span></div>
+        <p class="demo-note"><strong>Prototype note:</strong> All examples are currently limited to a 16 kHz sample rate. Recorded reference tracks pass through the same bandwidth-limited processing stage for a like-for-like comparison. Higher sample rates are planned as the model develops.</p>
+        <div id="demo-list" class="demo-list" aria-live="polite"></div>
+        <noscript><p class="notice">JavaScript is required to load the demo list.</p></noscript>
+      </section>
+
+      <section class="section state" id="state" aria-labelledby="state-title">
+        <div class="section-heading">
+          <div><p class="section-index">02 / CURRENT STATE</p><h2 id="state-title">Still in development.</h2></div>
+          <div class="state-copy"><p>Doubletracker is currently a research prototype. The model already produces convincing doubletracking on some material, but quality and generalization are still being improved.</p></div>
+        </div>
+        <div class="stats" aria-label="Project statistics">
+          <div class="stat"><strong data-stat="dataset">—</strong><span>paired DI dataset</span></div>
+          <div class="stat"><strong data-stat="contributors">—</strong><span>contributors</span></div>
+          <div class="stat"><strong data-stat="target">100 h</strong><span>dataset target</span></div>
+        </div>
+      </section>
+
+      <section class="section contribute" id="contribute" aria-labelledby="contribute-title">
+        <div class="contribute-main">
+          <p class="section-index light">03 / CONTRIBUTE</p>
+          <h2 id="contribute-title">Have double-tracked DI?</h2>
+          <p class="contribute-lead">The most useful contribution is real, independently recorded doubletracks that you own—or have permission to provide for model training.</p>
+          <div class="contact-actions">
+            <a class="button button-discord" data-link="discord" href="#" rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.317 4.369A19.8 19.8 0 0 0 15.885 3a14.9 14.9 0 0 0-.567 1.17 18.3 18.3 0 0 0-5.635 0A12.6 12.6 0 0 0 9.107 3a19.7 19.7 0 0 0-4.429 1.372C1.88 8.528 1.12 12.58 1.5 16.574a20 20 0 0 0 5.435 2.74 15 15 0 0 0 1.307-1.785 12.9 12.9 0 0 1-2.057-.987q.259-.189.506-.39c3.968 1.84 8.278 1.84 12.198 0q.248.203.507.39c-.66.389-1.35.72-2.06.987.38.623.818 1.22 1.307 1.785a19.9 19.9 0 0 0 5.435-2.74c.448-4.63-.765-8.645-3.761-12.205M8.02 14.086c-1.19 0-2.17-1.087-2.17-2.42s.956-2.42 2.17-2.42 2.191 1.087 2.17 2.42c0 1.333-.956 2.42-2.17 2.42m7.975 0c-1.19 0-2.17-1.087-2.17-2.42s.955-2.42 2.17-2.42 2.19 1.087 2.17 2.42c0 1.333-.955 2.42-2.17 2.42"/></svg>
+              Talk to me on Discord
+            </a>
+            <a class="text-link" data-link="email" href="#">or send an email <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <aside class="contribute-side" aria-label="Contributor benefits and useful contribution formats">
+          <div class="contributor-reward">
+            <strong>Contribute now.<br>Generate later.</strong>
+            <p>Contributors whose recordings are accepted into the dataset will receive generation credits when Doubletracker launches, based on the amount of usable paired DI contributed.</p>
+          </div>
+          <div class="contribute-details">
+            <h3>What is useful</h3>
+            <ul>
+              <li><span>01</span> Real, independently recorded doubletracks</li>
+              <li><span>02</span> Dry DI only — no amp sims or effects</li>
+              <li><span>03</span> Any genre</li>
+            </ul>
+            <p>No need to slice, clean, or otherwise prepare the audio. Just keep each pair clearly named; I handle the rest.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <a class="wordmark footer-wordmark" href="#top">Doubletracker<span class="wordmark-dot">.</span></a>
+      <p>Neural guitar doubletrack generator.</p>
+      <nav aria-label="Footer navigation">
+        <a data-link="github" href="#" rel="noopener noreferrer">GitHub ↗</a>
+        <a data-link="discord" href="#" rel="noopener noreferrer">Discord ↗</a>
+        <a data-link="email" href="#">Email ↗</a>
+        <a data-link="telegram" href="#" rel="noopener noreferrer">Telegram ↗</a>
+      </nav>
+      <small>Research prototype · <span id="year"></span></small>
+    </footer>
+  </body>
+</html>
